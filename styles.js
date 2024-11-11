@@ -6,6 +6,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: '#f5f5f5',
   },
+  HistoryDisplay: {
+    justifyContent: 'flex-end',
+    padding: 2,
+    backgroundColor: '#333',
+  },
   display: {
     flex: 1,
     justifyContent: 'flex-end',
@@ -48,7 +53,38 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#ccc',
     backgroundColor: '#fff',
-  }
+  },
+  history: {
+    flex: 3,
+    marginVertical: 10,
+  },
+  historyText: {
+    fontSize: 25,
+    color: '#555',
+    margin: 5,
+
+  },
+  clearButton: {
+    backgroundColor: '#ff5555',
+    padding: 12,
+    borderRadius: 8,
+    alignItems: 'center',
+  },
+  clearButtonText: {
+    color: '#fff',
+    fontSize: 18,
+    fontWeight: 'bold',
+  },historyButton: {
+    padding: 1,
+    backgroundColor: 'transparent',
+    borderRadius: 5, 
+    justifyContent: 'flex-end',
+    alignItems: 'flex-end',
+  },
+  historybuttonText: {
+    fontSize: 30,
+    color:'white'
+  },
 });
 
 export default styles;
