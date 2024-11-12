@@ -9,7 +9,6 @@ const useCalculatorViewModel = () => {
   const [result, setResult] = useState('');
   const [history, setHistory] = useState([]);
 
-  // JSON dosyasından geçmiş verilerini yükle
   const loadHistory = async () => {
     try {
       const fileExists = await FileSystem.getInfoAsync(HISTORY_FILE_PATH);
@@ -25,7 +24,6 @@ const useCalculatorViewModel = () => {
     }
   };
 
-  // Geçmiş verilerini JSON dosyasına kaydet
   const saveHistory = async (newHistory) => {
     try {
       await FileSystem.writeAsStringAsync(HISTORY_FILE_PATH, JSON.stringify(newHistory));
@@ -34,7 +32,6 @@ const useCalculatorViewModel = () => {
     }
   };
 
-  // Geçmiş verilerini temizle
   const clearHistory = async () => {
     try {
       await FileSystem.writeAsStringAsync(HISTORY_FILE_PATH, JSON.stringify([]));
